@@ -9,7 +9,6 @@
     "addons/*",
     "addons/storyshots/*",
     "app/*",
-    "lib/*",
     "examples/*-cli",
     "examples/cra-kitchen-sink",
     "examples/html-kitchen-sink",
@@ -18,8 +17,9 @@
     "examples/riot-kitchen-sink",
     "examples/svelte-kitchen-sink",
     "examples/vue-kitchen-sink",
+    "lib/*",
     "lib/cli/test/run/*"
   ],
   "registry": "https://registry.npmjs.org",
-  "version": "4.0.0-alpha.23"
+  "version": "4.0.0"
 }
