@@ -1,9 +1,9 @@
 # Storybook Addon Knobs
 
-Storybook Addon Knobs allow you to edit React props dynamically using the Storybook UI.
+Storybook Addon Knobs allow you to edit props dynamically using the Storybook UI.
 You can also use Knobs as a dynamic variable inside stories in [Storybook](https://storybook.js.org).
 
-[Framework Support](https://github.com/storybooks/storybook/blob/master/ADDONS_SUPPORT.md)
+[Framework Support](https://github.com/storybookjs/storybook/blob/master/ADDONS_SUPPORT.md)
 
 This is how Knobs look like:
 
@@ -16,7 +16,7 @@ This is how Knobs look like:
 First of all, you need to install knobs into your project as a dev dependency.
 
 ```sh
-npm install @storybook/addon-knobs --save-dev
+yarn add @storybook/addon-knobs --dev
 ```
 
 Then, configure it as an addon by adding it to your `addons.js` file (located in the Storybook config directory).
@@ -53,6 +53,59 @@ stories.add('as dynamic variables', () => {
   const content = `I am ${name} and I'm ${age} years old.`;
   return (<div>{content}</div>);
 });
+```
+
+### With Vue.js
+MyButton.story.js:
+```js
+import { storiesOf } from '@storybook/vue';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+
+import MyButton from './MyButton.vue';
+
+const stories = storiesOf('Storybook Knobs', module);
+
+// Add the `withKnobs` decorator to add knobs support to your stories.
+// You can also configure `withKnobs` as a global decorator.
+stories.addDecorator(withKnobs);
+
+// Assign `props` to the story's component, calling
+// knob methods within the `default` property of each prop,
+// then pass the story's prop data to the component’s prop in
+// the template with `v-bind:` or by placing the prop within
+// the component’s slot.
+stories.add('with a button', () => ({
+  components: { MyButton },
+  props: {
+    isDisabled: {
+      default: boolean('Disabled', false)
+    },
+    text: {
+      default: text('Text', 'Hello Storybook')
+    }
+  },
+  template: `<MyButton :isDisabled="isDisabled">{{ text }}</MyButton>`
+}));
+```
+
+MyButton.vue:
+```vue
+<template>
+  <button :disabled="isDisabled">
+    <slot></slot>
+  </button>
+</template>
+
+<script>
+export default {
+  props: {
+    isDisabled: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>
 ```
 
 ### With Angular
@@ -270,9 +323,39 @@ const options = {
       Watermelon: 'watermelon',
 };
 const defaultValue = 'kiwi';
+const groupId = 'GROUP-ID1';
 
-const value = radios(label, options, defaultValue);
+const value = radios(label, options, defaultValue, groupId);
 ```
+
+### options
+
+Configurable UI for selecting a value from a set of options. 
+
+```js
+import { optionsKnob as options } from '@storybook/addon-knobs';
+
+const label = 'Fruits';
+const valuesObj = {
+  Kiwi: 'kiwi',
+  Guava: 'guava',
+  Watermelon: 'watermelon',
+};
+const defaultValue = 'kiwi';
+const optionsObj = {
+  display: 'inline-radio'
+};
+const groupId = 'GROUP-ID1';
+
+const value = options(label, valuesObj, defaultValue, optionsObj, groupId);
+```
+> The display property for `optionsObj` accepts:
+> - `radio`
+> - `inline-radio`
+> - `check`
+> - `inline-check`
+> - `select`
+> - `multi-select`
 
 ### files
 
@@ -282,12 +365,15 @@ Allows you to get a value from a file input from the user.
 import { files } from '@storybook/addon-knobs';
 
 const label = 'Images';
+const accept = '.xlsx, .pdf';
 const defaultValue = [];
+const groupId = 'GROUP-ID1';
 
-const value = files(label, accept, defaultValue);
+const value = files(label, accept, defaultValue, groupId);
 ```
 
-> Multiple files can be selected, and will be returned as an array of [Data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+> You can optionally specify a [list of file types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept) which the file input should accept.
+> Multiple files can be selected, and will be returned as an array of [Data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
 ### date
 
@@ -329,6 +415,9 @@ const groupId = 'GROUP-ID1';
 button(label, handler, groupId);
 ```
 
+Button knobs cause the story to re-render after the handler fires, you can prevent
+this by having the handler return false.
+
 ### withKnobs options
 
 withKnobs also accepts two optional options as story parameters.
@@ -344,8 +433,8 @@ stories.addDecorator(withKnobs)
 stories.add('story name', () => ..., {
   knobs: {
     timestamps: true, // Doesn't emit events while user is typing.
-    escapeHTML: true // Escapes strings to be safe for inserting as innerHTML. This option is true by default in storybook for Vue, Angular, and Polymer, because those frameworks allow rendering plain HTML.
-                     // You can still set it to false, but it's strongly unrecommendend in cases when you host your storybook on some route of your main site or web app.  
+    escapeHTML: true // Escapes strings to be safe for inserting as innerHTML. This option is true by default. It's safe to set it to `false` with frameworks like React which do escaping on their side.
+                     // You can still set it to false, but it's strongly unrecommendend in cases when you host your storybook on some route of your main site or web app.
   }
 });
 ```
@@ -357,4 +446,10 @@ If you are using typescript, make sure you have the type definitions installed f
 -   node
 -   react
 
-You can install them using `npm install -save @types/node @types/react`, assuming you are using Typescript >2.0.
+You can install them using:
+*assuming you are using Typescript >2.0.*
+
+```sh
+yarn add @types/node @types/react --dev
+```
+

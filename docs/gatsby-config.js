@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/docs',
   siteMetadata: {
     siteTitle: 'Storybook',
     baseColor: '#e64074',
@@ -7,28 +8,43 @@ module.exports = {
     docSections: {
       basics: [
         '/basics/introduction/',
-        '/basics/quick-start-guide/',
-        '/basics/slow-start-guide/',
-        '/basics/guide-react/',
-        '/basics/guide-vue/',
-        '/basics/guide-angular/',
-        '/basics/guide-mithril/',
         '/basics/writing-stories/',
         '/basics/exporting-storybook/',
         '/basics/faq/',
-        '/basics/community/',
         '/basics/live-examples/',
       ],
+      guides: [
+        '/guides/quick-start-guide/',
+        '/guides/slow-start-guide/',
+        '/guides/guide-html/',
+        '/guides/guide-react/',
+        '/guides/guide-react-native/',
+        '/guides/guide-vue/',
+        '/guides/guide-angular/',
+        '/guides/guide-mithril/',
+        '/guides/guide-marko/',
+        '/guides/guide-ember/',
+        '/guides/guide-riot/',
+        '/guides/guide-svelte/',
+      ],
       configurations: [
+        '/configurations/options-parameter/',
         '/configurations/default-config/',
         '/configurations/custom-webpack-config/',
         '/configurations/custom-babel-config/',
         '/configurations/typescript-config/',
         '/configurations/add-custom-head-tags/',
+        '/configurations/add-custom-body/',
         '/configurations/serving-static-files/',
         '/configurations/env-vars/',
         '/configurations/theming/',
         '/configurations/cli-options/',
+        '/configurations/standalone-options/',
+      ],
+      formats: [
+        '/formats/component-story-format/',
+        '/formats/storiesof-api/',
+        '/formats/mdx-syntax/',
       ],
       testing: [
         '/testing/react-ui-testing/',
@@ -40,10 +56,10 @@ module.exports = {
       addons: [
         '/addons/introduction/',
         '/addons/using-addons/',
-        '/addons/addon-gallery/',
         '/addons/writing-addons/',
         '/addons/api/',
       ],
+      presets: ['/presets/introduction/', '/presets/preset-gallery/', '/presets/writing-presets/'],
     },
   },
   plugins: [
@@ -52,6 +68,12 @@ module.exports = {
       options: {
         name: 'pages',
         path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        repoUrl: 'https://github.com/storybookjs/storybook',
       },
     },
     {
@@ -71,5 +93,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-segment',
+      options: {
+        writeKey: 'AvvBObOmHaEMqfub8JJUXq5umjsuaqS8',
+      },
+    },
   ],
 };

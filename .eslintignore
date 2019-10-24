@@ -1,4 +1,5 @@
 dist
+lib/**/dll
 build
 coverage
 node_modules
@@ -6,8 +7,11 @@ docs/public
 storybook-static
 built-storybooks
 lib/cli/test
+lib/codemod/src/transforms/__testfixtures__
+scripts/storage
 *.bundle.js
 *.js.map
+*.d.ts
 
 !.remarkrc.js
 !.babelrc.js
@@ -15,3 +19,4 @@ lib/cli/test
 !.eslintrc-markdown.js
 !.jest.config.js
 !.storybook
+

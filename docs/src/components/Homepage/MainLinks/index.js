@@ -24,11 +24,9 @@ class MainLinks extends React.Component {
             <h2>Try Now</h2>
             <pre>
               <code>
-                npm i -g @storybook/cli
+                cd my-react-vue-angular-app
                 <br />
-                cd my-react-app
-                <br />
-                getstorybook
+                npx -p @storybook/cli sb init
                 <br />
               </code>
             </pre>
@@ -80,10 +78,10 @@ class MainLinks extends React.Component {
               </Link>
               <ul>
                 <li>
-                  <Link to="/basics/quick-start-guide/">Quick setup</Link>
+                  <Link to="/guides/quick-start-guide/">Quick setup</Link>
                 </li>
                 <li>
-                  <Link to="/basics/slow-start-guide/">Adding to existing project</Link>
+                  <Link to="/guides/slow-start-guide/">Adding to existing project</Link>
                 </li>
                 <li>
                   <Link to="/basics/writing-stories/">Writing stories</Link>
@@ -100,6 +98,9 @@ class MainLinks extends React.Component {
               </Link>
               <ul>
                 <li>
+                  <Link to="/configurations/options-parameter/">Storybook options</Link>
+                </li>
+                <li>
                   <Link to="/configurations/custom-babel-config/">Babel configurations</Link>
                 </li>
                 <li>
@@ -110,6 +111,9 @@ class MainLinks extends React.Component {
                 </li>
                 <li>
                   <Link to="/configurations/add-custom-head-tags/">Custom scripts & styling</Link>
+                </li>
+                <li>
+                  <Link to="/configurations/add-custom-body/">Custom html body</Link>
                 </li>
                 <li>
                   <Link to="/configurations/serving-static-files/">Serving static files</Link>
@@ -127,9 +131,6 @@ class MainLinks extends React.Component {
                 </li>
                 <li>
                   <Link to="/addons/using-addons/">Using Addons</Link>
-                </li>
-                <li>
-                  <Link to="/addons/addon-gallery/">Addon Gallery</Link>
                 </li>
                 <li>
                   <Link to="/addons/writing-addons/">Writing Addons</Link>

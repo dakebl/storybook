@@ -1495,7 +1495,7 @@ For an example, a simple button component could have following states:
 
 Usually, it’s hard to see these states without running a sample app or some examples.
 
-Create React App doesn’t include any tools for this by default, but you can easily add [Storybook for React](https://storybook.js.org) ([source](https://github.com/storybooks/storybook)) or [React Styleguidist](https://react-styleguidist.js.org/) ([source](https://github.com/styleguidist/react-styleguidist)) to your project. **These are third-party tools that let you develop components and see all their states in isolation from your app**.
+Create React App doesn’t include any tools for this by default, but you can easily add [Storybook for React](https://storybook.js.org) ([source](https://github.com/storybookjs/storybook)) or [React Styleguidist](https://react-styleguidist.js.org/) ([source](https://github.com/styleguidist/react-styleguidist)) to your project. **These are third-party tools that let you develop components and see all their states in isolation from your app**.
 
 ![Storybook for React Demo](http://i.imgur.com/7CIAWpB.gif)
 
@@ -1505,16 +1505,11 @@ You can also deploy your Storybook or style guide as a static app. This way, eve
 
 Storybook is a development environment for React UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.
 
-First, install the following npm package globally:
-
-```sh
-npm install -g @storybook/cli
-```
-
 Then, run the following command inside your app’s directory:
 
 ```sh
-storybook init
+cd my-react-app
+npx -p @storybook/cli sb init
 ```
 
 After that, follow the instructions on the screen.
@@ -1522,9 +1517,9 @@ After that, follow the instructions on the screen.
 Learn more about React Storybook:
 
 -   Screencast: [Getting Started with React Storybook](https://egghead.io/lessons/react-getting-started-with-react-storybook)
--   [GitHub Repo](https://github.com/storybooks/storybook)
+-   [GitHub Repo](https://github.com/storybookjs/storybook)
 -   [Documentation](https://storybook.js.org/basics/introduction/)
--   [Snapshot Testing UI](https://github.com/storybooks/storybook/tree/master/addons/storyshots) with Storybook + addon/storyshot
+-   [Snapshot Testing UI](https://github.com/storybookjs/storybook/tree/master/addons/storyshots) with Storybook + addon/storyshot
 
 ### Getting Started with Styleguidist
 

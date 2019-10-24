@@ -2,9 +2,9 @@
 
 Brings Jest results in storybook.
 
-[Framework Support](https://github.com/storybooks/storybook/blob/master/ADDONS_SUPPORT.md)
+[Framework Support](https://github.com/storybookjs/storybook/blob/master/ADDONS_SUPPORT.md)
 
-[![Storybook Jest Addon Demo](https://raw.githubusercontent.com/storybooks/storybook-addon-jest/master/storybook-addon-jest.gif)](http://storybooks-official.netlify.com/?selectedKind=Addons%7Cjest&selectedStory=withTests&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Ftests%2Fpanel)
+[![Storybook Jest Addon Demo](https://raw.githubusercontent.com/storybookjs/storybook-addon-jest/master/storybook-addon-jest.gif)](http://storybooks-official.netlify.com/?selectedKind=Addons%7Cjest&selectedStory=withTests&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Ftests%2Fpanel)
 
 > Checkout the above [Live Storybook](http://storybooks-official.netlify.com/?selectedKind=Addons%7Cjest&selectedStory=withTests&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Ftests%2Fpanel).
 
@@ -26,14 +26,14 @@ When running **Jest**, be sure to save the results in a json file:
 
 ```js
 "scripts": {
-  "test:generate-output": "jest --json --outputFile=jest-test-results.json"
+  "test:generate-output": "jest --json --outputFile=.jest-test-results.json"
 }
 ```
 
 You may want to add it the result file to `.gitignore`, since it's a generated file:
 
 ```
-jest-test-results.json
+.jest-test-results.json
 ```
 
 But much like lockfiles and snapshots checking-in generated files can have certain advantages as well. It's up to you.
@@ -180,7 +180,7 @@ storiesOf('MyComponent', module)
   );
 ```
 
-##### Example [here](https://github.com/storybooks/storybook/tree/master/examples/angular-cli)
+##### Example [here](https://github.com/storybookjs/storybook/tree/master/examples/angular-cli)
 
 ## TODO
 
@@ -193,7 +193,7 @@ storiesOf('MyComponent', module)
 
 ## Contributing
 
-Every ideas and contributions are welcomed.
+All ideas and contributions are welcomed.
 
 ## Licence
 

@@ -1,16 +1,22 @@
-import { configure } from '@storybook/html';
-import { setOptions } from '@storybook/addon-options';
+import { configure, addParameters, addDecorator } from '@storybook/html';
+import { withA11y } from '@storybook/addon-a11y';
 
-setOptions({
-  hierarchyRootSeparator: /\|/,
+addDecorator(withA11y);
+
+addParameters({
+  a11y: {
+    config: {},
+    options: {
+      checks: { 'color-contrast': { options: { noScroll: true } } },
+      restoreScroll: true,
+    },
+  },
+  options: {
+    hierarchyRootSeparator: /\|/,
+  },
+  docs: {
+    iframeHeight: '200px',
+  },
 });
 
-// automatically import all files ending in *.stories.js
-const req = require.context('../stories', true, /.stories.js$/);
-function loadStories() {
-  // Make welcome story default
-  require('../stories/index.stories');
-  req.keys().forEach(filename => req(filename));
-}
-
-configure(loadStories, module);
+configure(require.context('../stories', true, /\.stories\.(js|mdx)$/), module);

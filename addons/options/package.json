@@ -1,32 +1,42 @@
 {
   "name": "@storybook/addon-options",
-  "version": "4.0.2-alpha.0",
+  "version": "5.2.5",
   "description": "Options addon for storybook",
   "keywords": [
     "addon",
     "storybook"
   ],
-  "homepage": "https://github.com/storybooks/storybook/tree/master/addons/options",
-  "publishConfig": {
-    "access": "public"
-  },
+  "homepage": "https://github.com/storybookjs/storybook/tree/master/addons/options",
   "bugs": {
-    "url": "https://github.com/storybooks/storybook/issues"
+    "url": "https://github.com/storybookjs/storybook/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybooks/storybook.git"
+    "url": "https://github.com/storybookjs/storybook.git",
+    "directory": "addons/options"
   },
   "license": "MIT",
-  "main": "preview.js",
+  "files": [
+    "dist/**/*",
+    "docs/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/public_api.d.ts",
   "scripts": {
     "prepare": "node ../../scripts/prepare.js"
   },
   "dependencies": {
-    "@storybook/addons": "4.0.2-alpha.0",
+    "@storybook/addons": "5.2.5",
+    "core-js": "^3.0.1",
     "util-deprecate": "^1.0.2"
   },
   "peerDependencies": {
     "react": "*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

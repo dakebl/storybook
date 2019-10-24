@@ -1,24 +1,28 @@
 {
   "name": "@storybook/svelte",
-  "version": "4.0.2-alpha.0",
+  "version": "5.2.5",
   "description": "Storybook for Svelte: Develop Svelte Component in isolation with Hot Reloading.",
   "keywords": [
     "storybook"
   ],
-  "homepage": "https://github.com/storybooks/storybook/tree/master/app/svelte",
-  "publishConfig": {
-    "access": "public"
-  },
+  "homepage": "https://github.com/storybookjs/storybook/tree/master/app/svelte",
   "bugs": {
-    "url": "https://github.com/storybooks/storybook/issues"
+    "url": "https://github.com/storybookjs/storybook/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybooks/storybook.git"
+    "url": "https://github.com/storybookjs/storybook.git",
+    "directory": "app/svelte"
   },
   "license": "MIT",
+  "files": [
+    "bin/**/*",
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
   "main": "dist/client/index.js",
-  "jsnext:main": "src/client/index.js",
   "bin": {
     "build-storybook": "./bin/build.js",
     "start-storybook": "./bin/index.js",
@@ -28,19 +32,25 @@
     "prepare": "node ../../scripts/prepare.js"
   },
   "dependencies": {
-    "@storybook/core": "4.0.2-alpha.0",
+    "@storybook/core": "5.2.5",
     "common-tags": "^1.8.0",
+    "core-js": "^3.0.1",
     "global": "^4.3.2",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "regenerator-runtime": "^0.12.1"
   },
   "devDependencies": {
-    "svelte": "^2.13.1",
-    "svelte-loader": "^2.11.0"
+    "svelte": "^3.4.1",
+    "svelte-loader": "^2.13.4"
   },
   "peerDependencies": {
     "babel-loader": "^7.0.0 || ^8.0.0",
-    "svelte": "^2.7.2",
+    "svelte": "^3.1.0",
     "svelte-loader": "^2.9.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,31 +1,61 @@
-# Storybook
+<p align="center">
+  <a href="https://storybook.js.org/">
+    <img src="https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png" alt="Storybook" width="400" />
+  </a>
+</p>
 
-[![Build Status on TeamCity](https://teamcity.jetbrains.com/app/rest/builds/buildType:OpenSourceProjects_Storybook_Build_2/statusIcon.svg)](https://teamcity.jetbrains.com/viewType.html?buildTypeId=OpenSourceProjects_Storybook_Build_2&branch_OpenSourceProjects_Storybook=%3Cdefault%3E&tab=buildTypeStatusDiv)
-[![Build Status on CircleCI](https://circleci.com/gh/storybooks/storybook.svg?style=shield)](https://circleci.com/gh/storybooks/storybook)
-[![CodeFactor](https://www.codefactor.io/repository/github/storybooks/storybook/badge)](https://www.codefactor.io/repository/github/storybooks/storybook)
-[![Known Vulnerabilities](https://snyk.io/test/github/storybooks/storybook/badge.svg)](https://snyk.io/test/github/storybooks/storybook)
-[![BCH compliance](https://bettercodehub.com/edge/badge/storybooks/storybook)](https://bettercodehub.com/results/storybooks/storybook)
-[![codecov](https://codecov.io/gh/storybooks/storybook/branch/master/graph/badge.svg)](https://codecov.io/gh/storybooks/storybook)
-[![Storybook Slack](https://now-examples-slackin-rrirkqohko.now.sh/badge.svg)](https://now-examples-slackin-rrirkqohko.now.sh/)
-[![Backers on Open Collective](https://opencollective.com/storybook/backers/badge.svg)](#backers)
-[![Sponsors on Open Collective](https://opencollective.com/storybook/sponsors/badge.svg)](#sponsors)
-[![License](https://img.shields.io/github/license/storybooks/storybook.svg)](https://github.com/storybooks/storybook/blob/master/LICENSE)
-<!-- [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)](https://www.browserstack.com/automate/public-build/<badge_key>) -->
+<p align="center">Build bulletproof UI components faster</p>
 
-* * *
+<br/>
+
+<p align="center">
+  <a href="https://circleci.com/gh/storybookjs/storybook">
+    <img src="https://circleci.com/gh/storybookjs/storybook.svg?style=shield" alt="Build Status on CircleCI" />
+  </a>
+  <a href="https://www.codefactor.io/repository/github/storybookjs/storybook">
+    <img src="https://www.codefactor.io/repository/github/storybookjs/storybook/badge" alt="CodeFactor" />
+  </a>
+  <a href="https://snyk.io/test/github/storybookjs/storybook">
+    <img src="https://snyk.io/test/github/storybookjs/storybook/badge.svg" alt="Known Vulnerabilities" />
+  </a>
+  <a href="https://codecov.io/gh/storybookjs/storybook">
+    <img src="https://codecov.io/gh/storybookjs/storybook/branch/master/graph/badge.svg" alt="codecov" />
+  </a>
+  <a href="https://github.com/storybookjs/storybook/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/storybookjs/storybook.svg" alt="License" />
+  </a>
+  <br/>
+  <a href="https://discord.gg/sMFvFsG">
+    <img src="https://img.shields.io/badge/discord-join-7289DA.svg?logo=discord&longCache=true&style=flat" />
+  </a>
+  <a href="https://now-examples-slackin-rrirkqohko.now.sh/">
+    <img src="https://now-examples-slackin-rrirkqohko.now.sh/badge.svg?logo=slack" alt="Storybook Slack" />
+  </a>
+  <a href="#backers">
+    <img src="https://opencollective.com/storybook/backers/badge.svg" alt="Backers on Open Collective" />
+  </a>
+  <a href="#sponsors">
+    <img src="https://opencollective.com/storybook/sponsors/badge.svg" alt="Sponsors on Open Collective" />
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=storybookjs">
+    <img src="https://badgen.net/twitter/follow/storybookjs?icon=twitter&label=%40storybookjs" alt="Official Twitter Handle" />
+  </a>
+</p>
 
 Storybook is a development environment for UI components.
 It allows you to browse a component library, view the different states of each component, and interactively develop and test components.
 
-## Intro
 <center>
-    <img src="media/storybook-intro.gif" width="100%" />
+  <img src="media/storybook-intro.gif" width="100%" />
 </center>
 
-README for:
--   [![Alpha](https://img.shields.io/npm/v/@storybook/core/alpha.svg)](https://github.com/storybooks/storybook)
--   [![Latest](https://img.shields.io/npm/v/@storybook/core/latest.svg)](https://github.com/storybooks/storybook/tree/release/3.4)
+<p align="center">
+  View README for:<br/>
+  <a href="https://github.com/storybookjs/storybook/blob/master/README.md" title="latest"><img alt="latest" src="https://img.shields.io/npm/v/@storybook/core/latest.svg" /></a>
+  <a href="https://github.com/storybookjs/storybook/blob/next/README.md" title="next"><img alt="next" src="https://img.shields.io/npm/v/@storybook/core/next.svg" /></a>
+</p>
 
+## Intro
 
 Storybook runs outside of your app. This allows you to develop UI components in isolation, which can improve component reuse, testability, and development speed. You can build quickly without having to worry about application-specific dependencies.
 
@@ -35,121 +65,132 @@ Storybook comes with a lot of [addons](https://storybook.js.org/addons/introduct
 
 ## Table of contents
 
--   🚀[Getting Started](#getting-started)
--   📒[Projects](#projects)
-    -   🛠[Supported Frameworks & Examples](#supported-frameworks)
-    -   🚇[Sub Projects](#sub-projects)
-    -   🔗[Addons](#addons)
--   🏅[Badges & Presentation materials](#badges)
--   👥[Community](#community)
--   👏[Contributing](#contributing)
-    -   👨‍💻[Development scripts](#development-scripts)
-    -   💵[Backers](#backers)
-    -   💸[Sponsors](#sponsors)
+- 🚀[Getting Started](#getting-started)
+- 📒[Projects](#projects)
+  - 🛠[Supported Frameworks & Examples](#supported-frameworks)
+  - 🚇[Sub Projects](#sub-projects)
+  - 🔗[Addons](#addons)
+- 🏅[Badges & Presentation materials](#badges--presentation-materials)
+- 👥[Community](#community)
+- 👏[Contributing](#contributing)
+  - 👨‍💻[Development scripts](#development-scripts)
+  - 💵[Backers](#backers)
+  - 💸[Sponsors](#sponsors)
+- :memo:[License](#license)
 
 ## Getting Started
 
 First install storybook:
 
 ```sh
-npm i -g @storybook/cli
 cd my-react-app
-getstorybook
+npx -p @storybook/cli sb init
 ```
 
-The `-g` global install is used to run our cli tool in your project directory to generate templates for your existing projects. To avoid the global install and start your project manually, take a look at our [Slow Start Guide](https://storybook.js.org/basics/slow-start-guide/).
+If you'd rather set up your project manually, take a look at our [Slow Start Guide](https://storybook.js.org/basics/slow-start-guide/).
 
 Once it's installed, you can `npm run storybook` and it will run the development server on your local machine, and give you a URL to browse some sample stories.
 
-**Storybook v2.x migration note**: If you're using Storybook v2.x and want to shift to 3.x version the easiest way is:
+**Storybook v2.x migration note**: 
+If you're using Storybook v2.x and want to shift to 4.x version the easiest way is:
 
 ```sh
-npm i -g @storybook/cli
 cd my-storybook-v2-app
-getstorybook
+npx -p @storybook/cli sb init
 ```
 
 It runs a codemod to update all package names. Read all migration details in our [Migration Guide](MIGRATION.md)
 
 For full documentation on using Storybook visit: [storybook.js.org](https://storybook.js.org)
 
-For additional help, join us [in our Slack](https://now-examples-slackin-rrirkqohko.now.sh/)
+For additional help, join us [in our Discord](https://discord.gg/sMFvFsG) or [Slack](https://now-examples-slackin-rrirkqohko.now.sh/)
 
 ## Projects
 
 ### Supported Frameworks
 
-| Framework | Demo latest | Demo prerelease |  |
-|----|---|---|---|
-| [React](app/react) | [v3.4.x](https://release-3-4--storybooks-official.netlify.com), [v3.3.x](https://release-3-3--storybooks-official.netlify.com) | [v4.0.0-alpha](https://storybooks-official.netlify.com) | [![React](https://img.shields.io/npm/dt/@storybook/react.svg)](app/react) |
-| [React Native](app/react-native) | - | - | [![React Native](https://img.shields.io/npm/dt/@storybook/react-native.svg)](app/react-native) |
-| [Vue](app/vue) | [v3.4.x](https://release-3-4--storybooks-vue.netlify.com/), [v3.3.x](https://release-3-3--storybooks-vue.netlify.com/) | [v4.0.0-alpha](https://storybooks-vue.netlify.com/) | [![Vue](https://img.shields.io/npm/dt/@storybook/vue.svg)](app/vue) |
-| [Angular](app/angular) | [v3.4.x](https://release-3-4--storybooks-angular.netlify.com/), [v3.3.x](https://release-3-3--storybooks-angular.netlify.com/) | [v4.0.0-alpha](https://storybooks-angular.netlify.com/) | [![Angular](https://img.shields.io/npm/dt/@storybook/angular.svg)](app/angular) |
-| [Polymer](app/polymer) | [v3.4.x](https://release-3-4--storybooks-polymer.netlify.com/) | [v4.0.0-alpha](https://storybooks-polymer.netlify.com/) | [![Polymer](https://img.shields.io/npm/dt/@storybook/polymer.svg)](app/polymer) |
-| [Mithril](app/mithril) <sup>alpha</sup> | - | [v4.0.0-alpha](https://storybooks-mithril.netlify.com/) | [![Mithril](https://img.shields.io/npm/dt/@storybook/mithril.svg)](app/mithril) |
-| [Marko](app/marko) <sup>alpha</sup> | - | [v4.0.0-alpha](https://storybooks-marko.netlify.com/) | [![Marko](https://img.shields.io/npm/dt/@storybook/marko.svg)](app/marko) |
-| [HTML](app/html) <sup>alpha</sup> | - | [v4.0.0-alpha](https://storybooks-html.netlify.com/) | [![HTML](https://img.shields.io/npm/dt/@storybook/html.svg)](app/html) |
-| [Svelte](app/svelte) <sup>alpha</sup> | - | [v4.0.0-alpha](https://storybooks-svelte.netlify.com/) | [![Svelte](https://img.shields.io/npm/dt/@storybook/svelte.svg)](app/svelte) |
-| [Riot](app/riot) <sup>alpha</sup> | - | [v4.0.0-alpha](https://storybooks-riot.netlify.com/) | [![Riot](https://img.shields.io/npm/dt/@storybook/riot.svg)](app/riot) |
-| [Ember](app/ember) | - | [v4.0.0-alpha](https://storybooks-ember.netlify.com/) | [![Ember](https://img.shields.io/npm/dt/@storybook/ember.svg)](app/ember) |
+| Framework                        | Demo                                              |                                                                                                |
+| -------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [React](app/react)               | [v5.1.0](https://storybooks-official.netlify.com) | [![React](https://img.shields.io/npm/dm/@storybook/react.svg)](app/react)                      |
+| [React Native](app/react-native) | -                                                 | [![React Native](https://img.shields.io/npm/dm/@storybook/react-native.svg)](app/react-native) |
+| [Vue](app/vue)                   | [v5.1.0](https://storybooks-vue.netlify.com/)     | [![Vue](https://img.shields.io/npm/dm/@storybook/vue.svg)](app/vue)                            |
+| [Angular](app/angular)           | [v5.1.0](https://storybooks-angular.netlify.com/) | [![Angular](https://img.shields.io/npm/dm/@storybook/angular.svg)](app/angular)                |
+| [Polymer](app/polymer)           | [v5.1.0](https://storybooks-polymer.netlify.com/) | [![Polymer](https://img.shields.io/npm/dm/@storybook/polymer.svg)](app/polymer)                |
+| [Mithril](app/mithril)           | [v5.1.0](https://storybooks-mithril.netlify.com/) | [![Mithril](https://img.shields.io/npm/dm/@storybook/mithril.svg)](app/mithril)                |
+| [Marko](app/marko)               | [v5.1.0](https://storybooks-marko.netlify.com/)   | [![Marko](https://img.shields.io/npm/dm/@storybook/marko.svg)](app/marko)                      |
+| [HTML](app/html)                 | [v5.1.0](https://storybooks-html.netlify.com/)    | [![HTML](https://img.shields.io/npm/dm/@storybook/html.svg)](app/html)                         |
+| [Svelte](app/svelte)             | [v5.1.0](https://storybooks-svelte.netlify.com/)  | [![Svelte](https://img.shields.io/npm/dm/@storybook/svelte.svg)](app/svelte)                   |
+| [Riot](app/riot)                 | [v5.1.0](https://storybooks-riot.netlify.com/)    | [![Riot](https://img.shields.io/npm/dm/@storybook/riot.svg)](app/riot)                         |
+| [Ember](app/ember)               | [v5.1.0](https://storybooks-ember.netlify.com/)   | [![Ember](https://img.shields.io/npm/dm/@storybook/ember.svg)](app/ember)                      |
+| [Preact](app/preact)             | [v5.1.0](https://storybooks-preact.netlify.com/)  | [![Preact](https://img.shields.io/npm/dm/@storybook/preact.svg)](app/preact)                   |
 
 ### Sub Projects
 
--   [CLI](lib/cli) - Streamlined installation for a variety of app types
--   [examples](examples) - Code examples to illustrate different Storybook use cases
+- [CLI](lib/cli) - Streamlined installation for a variety of app types
+- [examples](examples) - Code examples to illustrate different Storybook use cases
 
 ### Addons
 
-| Addons |   |
-|----|---|
-| [a11y](addons/a11y/) | Test components for user accessibility in Storybook |
-| [actions](addons/actions/) | Log actions as users interact with components in the Storybook UI |
-| [backgrounds](addons/backgrounds/) | Let users choose backgrounds in the Storybook UI |
-| [centered](addons/centered/) | Center the alignment of your components within the Storybook UI |
-| [events](addons/events/) | Interactively fire events to components that respond to EventEmitter |
-| [graphql](addons/graphql/) | Query a GraphQL server within Storybook stories |
-| [info](addons/info/) | Annotate stories with extra component usage information |
-| [jest](addons/jest/) | View the results of components' unit tests in Storybook |
-| [knobs](addons/knobs/) | Interactively edit component prop data in the Storybook UI |
-| [links](addons/links/) | Create links between stories |
-| [notes](addons/notes/) | Annotate Storybook stories with notes |
-| [options](addons/options/) | Customize the Storybook UI in code |
-| [storyshots](addons/storyshots/) | Easy snapshot testing for components in Storybook |
-| [storysource](addons/storysource/) | View the code of your stories within the Storybook UI |
-| [viewport](addons/viewport/) | Change display sizes and layouts for responsive components using Storybook |
+| Addons                                      |                                                                            |
+| ------------------------------------------- | -------------------------------------------------------------------------- |
+| [a11y](addons/a11y/)                        | Test components for user accessibility in Storybook                        |
+| [actions](addons/actions/)                  | Log actions as users interact with components in the Storybook UI          |
+| [backgrounds](addons/backgrounds/)          | Let users choose backgrounds in the Storybook UI                           |
+| [centered](addons/centered/)                | Center the alignment of your components within the Storybook UI            |
+| [contexts](addons/contexts/)                | Interactively inject component contexts for stories in the Storybook UI    |
+| [cssresources](addons/cssresources/)        | Dynamically add/remove css resources to the component iframe               |
+| [design assets](addons/design-assets/)      | View images, videos, weblinks alongside your story                         |
+| [events](addons/events/)                    | Interactively fire events to components that respond to EventEmitter       |
+| [graphql](addons/graphql/)                  | Query a GraphQL server within Storybook stories                            |
+| [google-analytics](addons/google-analytics) | Reports google analytics on stories                                        |
+| [info](addons/info/)                        | Annotate stories with extra component usage information                    |
+| [jest](addons/jest/)                        | View the results of components' unit tests in Storybook                    |
+| [knobs](addons/knobs/)                      | Interactively edit component prop data in the Storybook UI                 |
+| [links](addons/links/)                      | Create links between stories                                               |
+| [notes](addons/notes/)                      | Annotate Storybook stories with notes                                      |
+| [options](addons/options/)                  | Customize the Storybook UI in code                                         |
+| [storyshots](addons/storyshots/)            | Easy snapshot testing for components in Storybook                          |
+| [storysource](addons/storysource/)          | View the code of your stories within the Storybook UI                      |
+| [viewport](addons/viewport/)                | Change display sizes and layouts for responsive components using Storybook |
 
 See [Addon / Framework Support Table](ADDONS_SUPPORT.md)
 
 ## Badges & Presentation materials
 
-We have a badge ! Link it to your live Storybook example.
+We have a badge! Link it to your live Storybook example.
 
-![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)
+![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)
 
 ```md
-[![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](link to site)
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](link to site)
 ```
 
-If you're looking for material to use in your presentation about storybook, like logo's video material and the colors we use etc, you can find all of that at our [press repo](https://github.com/storybooks/press).
+If you're looking for material to use in your presentation about storybook, like logo's video material and the colors we use etc, you can find all of that at our [brand repo](https://github.com/storybookjs/brand).
 
 ## Community
 
--   Tweeting via [@storybookjs](https://twitter.com/storybookjs)
--   Blogging at [Medium](https://medium.com/storybookjs)
--   Chatting on [Slack](https://now-examples-slackin-rrirkqohko.now.sh/)
--   Discussions on [Discord](https://discord.gg/sMFvFsG)
--   Streaming saved at [Youtube](https://www.youtube.com/channel/UCr7Quur3eIyA_oe8FNYexfg)
+- Tweeting via [@storybookjs](https://twitter.com/storybookjs)
+- Blogging at [Medium](https://medium.com/storybookjs)
+- Chatting on [Slack](https://now-examples-slackin-rrirkqohko.now.sh/)
+- Discussions on [Discord](https://discord.gg/sMFvFsG)
+- Streaming saved at [Youtube](https://www.youtube.com/channel/UCr7Quur3eIyA_oe8FNYexfg)
 
 ## Contributing
 
-[![Good First Issue](https://img.shields.io/github/issues/storybooks/storybook/good%20first%20issue.svg)](https://github.com/storybooks/storybook/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
-
 We welcome contributions to Storybook!
 
--   ⇄ Pull requests and ★ Stars are always welcome.
--   Read our [contributing guide](CONTRIBUTING.md) to get started.
+- 📥 Pull requests and 🌟 Stars are always welcome.
+- Read our [contributing guide](CONTRIBUTING.md) to get started.
+  or find us on [Discord](https://discord.gg/sMFvFsG), we're will take the time to guide you
+
+Looking for a first issue to tackle?
+
+- We tag issues with [![Good First Issue](https://img.shields.io/github/issues/storybookjs/storybook/good%20first%20issue.svg)](https://github.com/storybookjs/storybook/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) when we think they are well suited for people who are new to the codebase or OSS in general.
+- [Talk to us](https://discord.gg/sMFvFsG), we'll find something to suits your skills and learning interest.
 
 ### Development scripts
+
+Storybook is organized as a monorepo using [Lerna](https://lerna.js.org/). Useful scripts include:
 
 #### `yarn bootstrap`
 
@@ -164,16 +205,16 @@ We welcome contributions to Storybook!
 
 > boolean check if code conforms to linting rules - uses remark & eslint
 
--   `yarn lint:js` - will check js
--   `yarn lint:md` - will check markdown + code samples
+- `yarn lint:js` - will check js
+- `yarn lint:md` - will check markdown + code samples
 
--   `yarn lint:js --fix` - will automatically fix js
+- `yarn lint:js --fix` - will automatically fix js
 
 #### `yarn test`
 
 > boolean check if unit tests all pass - uses jest
 
--   `yarn run test --core --watch` - will run core tests in watch-mode
+- `yarn run test --core --watch` - will run core tests in watch-mode
 
 ### Sponsors
 
@@ -184,7 +225,6 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 <a href="https://opencollective.com/storybook/sponsor/2/website" target="_blank"><img src="https://opencollective.com/storybook/sponsor/2/avatar.svg"></a>
 <a href="https://opencollective.com/storybook/sponsor/3/website" target="_blank"><img src="https://opencollective.com/storybook/sponsor/3/avatar.svg"></a>
 <a href="https://opencollective.com/storybook/sponsor/4/website" target="_blank"><img src="https://opencollective.com/storybook/sponsor/4/avatar.svg"></a>
-<a href="https://applitools.com/" target="_blank"><img src="https://file-xvimrfykua.now.sh/"></a>
 <a href="https://opencollective.com/storybook/sponsor/5/website" target="_blank"><img src="https://opencollective.com/storybook/sponsor/5/avatar.svg"></a>
 <a href="https://opencollective.com/storybook/sponsor/6/website" target="_blank"><img src="https://opencollective.com/storybook/sponsor/6/avatar.svg"></a>
 <a href="https://opencollective.com/storybook/sponsor/7/website" target="_blank"><img src="https://opencollective.com/storybook/sponsor/7/avatar.svg"></a>
@@ -248,4 +288,6 @@ Support us with a monthly donation and help us continue our activities. \[[Becom
 
 ## License
 
-[MIT](https://github.com/storybooks/storybook/blob/master/LICENSE)
+[MIT](https://github.com/storybookjs/storybook/blob/master/LICENSE)
+
+-the end-

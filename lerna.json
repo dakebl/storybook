@@ -1,9 +1,4 @@
 {
-  "command": {
-    "publish": {
-      "allowBranch": "master"
-    }
-  },
   "npmClient": "yarn",
   "useWorkspaces": true,
   "packages": [
@@ -23,4 +18,3 @@
   ],
   "registry": "https://registry.npmjs.org",
   "version": "4.0.2-alpha.0"
-}

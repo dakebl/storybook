@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import capitalize from 'lodash/capitalize';
@@ -6,8 +7,8 @@ import Docs from '../components/Docs';
 
 const categories = [
   {
-    id: 'react-storybook',
-    title: 'React Storybook',
+    id: 'storybook',
+    title: 'Storybook',
   },
 ];
 
@@ -86,9 +87,12 @@ export const pageQuery = graphql`
       siteMetadata {
         docSections {
           basics
+          guides
           configurations
+          formats
           testing
           addons
+          presets
         }
       }
     }

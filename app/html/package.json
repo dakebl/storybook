@@ -1,23 +1,29 @@
 {
   "name": "@storybook/html",
-  "version": "4.0.2-alpha.0",
+  "version": "5.2.5",
   "description": "Storybook for HTML: View HTML snippets in isolation with Hot Reloading.",
   "keywords": [
     "storybook"
   ],
-  "homepage": "https://github.com/storybooks/storybook/tree/master/app/html",
-  "publishConfig": {
-    "access": "public"
-  },
+  "homepage": "https://github.com/storybookjs/storybook/tree/master/app/html",
   "bugs": {
-    "url": "https://github.com/storybooks/storybook/issues"
+    "url": "https://github.com/storybookjs/storybook/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybooks/storybook.git"
+    "url": "https://github.com/storybookjs/storybook.git",
+    "directory": "app/html"
   },
   "license": "MIT",
+  "files": [
+    "bin/**/*",
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
   "main": "dist/client/index.js",
+  "types": "dist/client/index.d.ts",
   "bin": {
     "build-storybook": "./bin/build.js",
     "start-storybook": "./bin/index.js",
@@ -27,15 +33,22 @@
     "prepare": "node ../../scripts/prepare.js"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0",
-    "@storybook/core": "4.0.2-alpha.0",
+    "@storybook/addons": "5.2.5",
+    "@storybook/core": "5.2.5",
+    "@types/webpack-env": "^1.13.9",
     "common-tags": "^1.8.0",
+    "core-js": "^3.0.1",
     "global": "^4.3.2",
     "html-loader": "^0.5.5",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "regenerator-runtime": "^0.12.1"
   },
   "peerDependencies": {
     "babel-loader": "^7.0.0 || ^8.0.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,6 +1,7 @@
 node_modules
 *.log
 .idea
+*.iml
 .vscode
 *.sw*
 npm-shrinkwrap.json
@@ -23,3 +24,11 @@ integration/__image_snapshots__/__diff_output__
 .jest-test-results.json
 /examples/cra-kitchen-sink/src/__image_snapshots__/__diff_output__/
 lib/*.jar
+lib/**/dll
+.expo/packager-info.json
+scripts/storage
+htpasswd
+/false
+storybook-out
+/addons/docs/common/config-*
+built-storybooks

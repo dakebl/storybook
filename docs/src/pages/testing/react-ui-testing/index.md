@@ -60,9 +60,8 @@ If we are using inline styles all the way, we can use JEST snapshot testing.
 But to get even better results, we should consider using tools such as:
 
 -   [BackstopJS](https://github.com/garris/BackstopJS)
--   [PhantomCSS](https://github.com/Huddle/PhantomCSS)
 -   [Gemini](https://github.com/gemini-testing/gemini)
--   [Happo](https://github.com/Galooshi/happo)
+-   [Happo](https://github.com/happo/happo.io)
 
 ### 4. Manual Testing
 
@@ -78,7 +77,7 @@ But it would be great if we could do this once in a while (especially with a ma
 
 ## How Storybook Can Help Us
 
-A **story** is a smallest unit in Storybook.
+A **story** is the smallest unit in Storybook.
 It's a fully functioning UI element where the input can be used for any of the testing methods we've mentioned above.
 
 Let's look at how Storybook can help you do the above mentioned different aspects of testing.

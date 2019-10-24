@@ -4,7 +4,7 @@ import deprecate from 'util-deprecate';
 import { makeDecorator } from '@storybook/addons';
 import { logger } from '@storybook/client-logger';
 import Story from './components/Story';
-import PropTable from './components/PropTable';
+import PropTable from './components/PropTable/index';
 import makeTableComponent from './components/makeTableComponent';
 import { H1, H2, H3, H4, H5, H6, Code, P, UL, A, LI } from './components/markdown';
 
@@ -13,6 +13,12 @@ const defaultOptions = {
   header: true,
   source: true,
   propTables: [],
+  propTableCompare: (element, Component) =>
+    // https://github.com/gaearon/react-hot-loader#checking-element-types
+    typeof reactHotLoaderGlobal === 'undefined'
+      ? element.type === Component
+      : // eslint-disable-next-line no-undef
+        reactHotLoaderGlobal.areComponentsEqual(element.type, Component),
   TableComponent: PropTable,
   maxPropsIntoLine: 3,
   maxPropObjectKeys: 3,
@@ -73,6 +79,7 @@ function addInfo(storyFn, context, infoOptions) {
         : s => nestedObjectAssign({}, s, options.styles),
     propTables: options.propTables,
     propTablesExclude: options.propTablesExclude,
+    propTableCompare: options.propTableCompare,
     PropTable: makeTableComponent(options.TableComponent),
     components,
     maxPropObjectKeys: options.maxPropObjectKeys,
